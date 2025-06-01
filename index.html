@@ -8,12 +8,18 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="background">
         <header class="container">
-        <div class="modal-content monoton-regular">MOVIES SITE</div>
+        <div class="modal-content monoton-regular">
+             <span class="gradient-left">Movies</span>
+             <span class="gradient-right">Site</span>
+        </div>
         <nav id="mobile-nav">
             <ul class="list monoton-regular ">
                 <li>
@@ -32,8 +38,8 @@
         </nav>
              <div class="btn-sign-in">
                 <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-                <button class="btn-login">Login</button>
-                <button class="btn-register">Register</button>
+                <button style="font-family: 'Oswald', sans-serif;" class="btn-login">Login</button>
+                <button style="font-family: 'Oswald', sans-serif;" class="btn-register">Register</button>
             </div>
             <div id="menu-toggle"class="bar">
                 <i class="fa-solid fa-bars" id="open-icon"></i>
@@ -58,7 +64,7 @@
                     </div>
                 </div>
         </section>
-        <h2 style="color: #ff1744; margin-bottom: 1rem;">Featured Movies</h2>
+        <h2  style="font-family: 'Oswald', sans-serif ;color: #f4f2f2; margin-bottom: 1rem;">Featured Movies</h2>
         <div class="movie-grid" id="movieGrid">
         <!-- Movies will be inserted by JavaScript -->
         </div>

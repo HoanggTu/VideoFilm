@@ -14,6 +14,40 @@ header {
     font-size: 2rem;
     letter-spacing: 5px;
 }
+.modal-content {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(to bottom right, #ffffff, #999999, #131313, #000000);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 5s ease-in-out infinite;
+    text-shadow: 0 0 30px rgba(120, 119, 198, 0.5);
+}
+/* .gradient-left{
+    background: linear-gradient(to bottom right, #ffffff, #999999, #131313, #000000);
+    animation: gradientLeft 5s ease-in-out infinite;
+} */
+@keyframes gradientShift{
+  0%   { background-position: 0% 0%; }
+  25%  { background-position: 100% 0%; }
+  50%  { background-position: 100% 100%; }
+  75%  { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+/* .gradient-right{
+    background: linear-gradient(to bottom right, #ffffff, #999999, #131313, #000000);
+    animation: gradientRight 5s ease-in-out infinite;
+
+}
+@keyframes gradientRight {
+  0%   { background-position: 0% 0%; }
+  25%  { background-position: 100% 0%; }
+  50%  { background-position: 100% 100%; }
+  75%  { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+} */
+
 .bar{
     display: none;
     position:relative;
@@ -98,7 +132,7 @@ ul.list{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #f9f9f9;
+    color: #f61515;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -141,8 +175,8 @@ ul.list{
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 .search-box:focus-within {
-    border-color: #7877c6;
-    box-shadow: 0 0 30px rgba(120, 119, 198, 0.5), 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-color: #222225;
+    box-shadow: 0 0 30px #c62828, 0 8px 32px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
     background: rgba(255, 255, 255, 0.15);
 }
@@ -157,7 +191,7 @@ ul.list{
     flex: 1;
     background: none;
     border: none;
-    color: white;
+    color: #c62828;
     font-size: 1.1rem;
     outline: none;
 }
