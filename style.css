@@ -250,7 +250,48 @@ ul.list{
       color: #bbb;
     }
 
+footer {
+    position: relative;
+    top:10rem;
+    text-align: center;
+    padding: 40px 0 20px;
+    font-size: 0.9rem;
+    color: #888;
+    
+  }
+.relative{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* border-top: 1px solid #666; */
+    width:30%;
+    margin:0 auto;
+    padding: 0 200px;
 
+  }
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    gap:10px;
+  }
+.social-icons a {
+
+    color:#888;
+    cursor: pointer;text-decoration: none;
+    border: none;
+    transition: 1s all;
+  }
+.social-icons a:hover {
+    color: #0f1011;
+    transform: scale(1.2);
+  }
+
+p{
+  font-size: clamp(10.2px, 2.5vw, 14.4px);
+
+}
 @media(max-width:900px){
 
    .background header nav,
