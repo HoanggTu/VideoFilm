@@ -20,7 +20,7 @@
                     <a href="">Home</a>
                 </li>
                 <li> 
-                    <a href="">couses</a>
+                    <a href="">courses</a>
                 </li>
                 <li>
                     <a href="">Instructors</a>
@@ -41,16 +41,27 @@
             </div>
             <div class="scroll_header_wrapper" title="Back to header">
                 <a class="scroll_wrapper" id="scroll-button">
-                    <div class="scroll_header"><i class="fa-solid fa-arrow-up"></i></div>
+                    <div class="scroll_header"><i class="fa-solid fa-arrow-up" id="open-icon2"></i></div>
                 </a>
             </div>
     </header>
     </div>
-     <main class="main-content">
-      <h2 style="color: #ff1744; margin-bottom: 1rem;">Featured Movies</h2>
-      <div class="movie-grid" id="movieGrid">
+    <main class="main-content">
+        <section class="search-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Tìm gì, nhìn cái giề...">
+                        <button id="clearSearchBtn" class="clear-search-btn" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+        </section>
+        <h2 style="color: #ff1744; margin-bottom: 1rem;">Featured Movies</h2>
+        <div class="movie-grid" id="movieGrid">
         <!-- Movies will be inserted by JavaScript -->
-      </div>
+        </div>
     </main>
 
 </body>
