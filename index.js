@@ -128,6 +128,7 @@ const movies = [
 const grid = document.getElementById("movieGrid");
   movies.forEach(movie => {
     const card = document.createElement("div");
+      card.style="font-family: 'Josefin Sans', sans-serif;";
       card.className = "movie-card";
       card.innerHTML = `
         <img src="${movie.image}" alt="${movie.title}" class="img_src">
