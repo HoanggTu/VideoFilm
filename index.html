@@ -38,8 +38,8 @@
         </nav>
              <div class="btn-sign-in">
                 <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-                <button style="font-family: 'Oswald', sans-serif;" class="btn-login">Login</button>
-                <button style="font-family: 'Oswald', sans-serif;" class="btn-register">Register</button>
+                <button style="font-family: 'Oswald', sans-serif;" class="btn-login" id="contactBtn" onclick="window.location.href='login.html'">Login</button>
+                <button style="font-family: 'Oswald', sans-serif;" class="btn-register" id="contactBtn" onclick="window.location.href='login.html'">Register</button>
             </div>
             <div id="menu-toggle"class="bar">
                 <i class="fa-solid fa-bars" id="open-icon"></i>
@@ -82,5 +82,16 @@
          <p>© Junnio & Rechiee. All rights reserved.</p>
     </footer>
 </body>
+<script>
+    document.getElementById("contactBtn").addEventListener("click", function() {
+        if (localStorage.getItem("isLoggedIn") === "true") {
+            window.location.href = "login.html";
+        } else {
+            alert("Vui lòng đăng nhập trước khi tiếp tục.");
+        }
+    });
+    </script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
 <script src="./index.js"></script>
 </html>

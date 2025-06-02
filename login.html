@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="icon" href="./mushokutensei.png">
+    <link rel="stylesheet" href="./card.html">
+    <link rel="stylesheet" href="./forgot.html">
+    <link rel="stylesheet" href="./style.css">
+    <title>pla pla</title>
+    <style>
+ *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    width:100%;
+    background: #000000;
+    /* background: radial-gradient(circle,rgba(2, 0, 36, 1)10%, rgba(9, 9, 121, 1) 43%, rgba(84, 40, 138, 1) 100%); */
+}
+.container {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: clamp(6px, 1.7vw, 12px);
+}
+.bg{
+    height: 100vh;
+    width: 100%;
+    background-image: url("./img/Netflix\ Indian\ Movies\ and\ Web\ Series.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-color: #00000066;
+    background-blend-mode:darken ;
+    
+}
+@property --angle{
+syntax:"<angle>";
+initial-value: 0deg;
+inherits: false;
+}
+@keyframes spinner{
+from {
+--angle:0deg;
+}
+to {
+--angle:360deg;
+}
+}
+.blur-overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.login-form {
+width: 100%;
+position: relative;
+max-width: 400px;
+padding: 40px;
+background: rgba(22, 22, 22, 0.05); /* hoặc thử 0.1 */
+backdrop-filter: blur(5px);
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap:12px;
+}
+input{
+    color: azure;
+}
+/* .login-form{
+    
+    font-size: bold;
+    margin-bottom: 20px;
+    color: #000000;
+    animation: pop 0.5s ease;
+        
+} */
+#login-form_line {
+position: absolute;
+width: 100%;
+background-image: conic-gradient(from var(--angle),red,white,blue,white,red);
+max-width: 403px;
+border-radius: 12px;
+padding: 125px;
+filter: blur(20px);
+opacity: 0.5;
+animation: spinner 20s linear infinite;
+--angle:0deg;
+z-index: -11;
+}
+#username, #userpass {
+padding:10px 40px;
+border-radius: 12px;
+text-align: center;
+transition: all 0.2s ease;
+background: rgba(56, 53, 53, 0.05); /* hoặc thử 0.1 */
+backdrop-filter: blur(15px);
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
+border: none;
+}
+#username:hover, #userpass:hover{
+transform: scale(1.05);
+border:1px solid grey;
+opacity: 1;
+}   
+button {
+color:aliceblue;    
+background: #f61515;
+padding:10px 20px;
+font-size: 10px;
+border: none;
+border-radius: 12px;
+transition: all 0.2s ease;
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+button:hover {
+transform: scale(1.05);
+background: rgba(255, 0, 0, 0.646);
+}
+@keyframes pop {
+0% { transform: scale(1); }
+50% { transform: scale(1.1); }
+100% { transform: scale(1); }
+}
+#bar_h {
+width:90%;
+border:1px solid black;
+}
+#forgot_ {
+position: absolute;
+color: rgba(231, 222, 231, 0.515);
+font-size: 10px;
+bottom:0;
+margin-bottom:15px;
+text-shadow: 0 0 1px;
+text-decoration: underline;
+font-style: italic;
+translate: -40px;
+cursor:pointer;
+
+}
+#register_{
+position: absolute;
+font-style: italic;
+text-decoration: underline;
+font-style: italic;
+color: rgba(223, 209, 223, 0.515);
+margin-bottom:15px;
+font-size: 10px;
+text-shadow: 0 0 1px;
+translate: 40px;
+bottom:0;
+cursor:pointer;
+}
+#register_:hover{
+color:#f61515;
+transform: scale(1.05);
+}
+#forgot_:hover{
+color:#f61515;
+transform: scale(1.05);
+}
+#error {
+margin:5px;
+}
+    </style>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <div>
+        <div class="container bg">
+            <div class="blur_overlay">
+                <div id="login-form_line"></div>
+                <div class="login-form">
+                    <label style="font-family: 'Oswald', sans-serif " for="Login">LOGIN</label>
+                    <h1 style="font-family: 'Oswald', sans-serif ">Mày là Admin!</h1>
+                    <div id="bar_h"></div>
+                    <input type="text" placeholder="Enter user's name..." id="username">
+                    <input type="password" placeholder="password..." id="userpass">
+                   <button class="button" onclick="validate()">LOGIN</button> 
+                   <div id="error"></div>
+                   <div id="bar_h"></div>
+                   <a href="'index.html'" id="forgot_"  target="_blank" rel="noopener noreferrer">Forgot?</a>
+                   <a href="'index.html'" id="register_">Register</a>
+                   <span>Bạn muốn tranh quyền Admin?</span>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    function validate() {
+    const username = document.getElementById("username");
+    const password = document.getElementById("userpass");
+    const error = document.getElementById("error");
+    if (username.value.trim() === "" || password.value.trim() === "") {
+        error.innerHTML = "Vui lòng nhập đầy đủ tên và mật khẩu!";
+        error.style.animation="none";
+        error.offsetHeight;
+        error.style.animation = "pop 0.3s ease";
+        error.style.color = "red";
+    } else if (password.value==="zacc147193"&& username.value==="ngovanhoangtu") {
+       
+        error.innerHTML = `Hello ${username.value}! {ADMIN}`;
+        error.style.animation="none";
+        error.offsetHeight;
+        error.style.animation = "pop 0.3s ease";
+        error.style.color = "green";
+        setTimeout(function() {
+            window.location.href="slideshow.html";
+        }, 1000);
+    }else {
+        error.innerHTML ="Sai Tên hoặc mật khẩu!";
+        error.style.animation="none";
+        error.offsetHeight;
+        error.style.animation = "pop 0.3s ease";
+        error.style.color = "red";
+    }
+}
+document.addEventListener("keydown",function(e){
+    if(e.key==="Enter") {
+        validate();
+    }
+});
+    </script>
+</body>
+</html> 

@@ -73,7 +73,7 @@ header {
 }
 nav .list{
     display: flex;
-    font-size: clamp(8px, 2.0vw, 12px);
+    font-size: clamp(6px, 1.7vw, 12px);
     list-style: none;
     gap:1rem;
     text-align: center;
@@ -95,6 +95,7 @@ ul.list{
     transform: scale(1.1);
 }
 .btn-sign-in i{
+    
     transition: all 0.4 ease;
     transform: scale(1.05);
 }
