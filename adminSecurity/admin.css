@@ -1,0 +1,171 @@
+/* admin.css */
+
+/* 1. Sử dụng biến màu và font giống style.css chính */
+:root {
+  /* Giả sử trong style.css bạn có khai báo biến: */
+  /* --primary: #e50914; --bg: #141414; --text: #f5f5f1; */
+}
+**{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 2. Áp font chung từ style.css */
+body {
+  background-color:black;
+  color: var(--text);
+  font-family: 'Oswald', sans-serif;
+}
+
+/* 3. Header giống trang chính */
+header.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #c62828;
+  border-bottom: 1px solid #333;
+}
+
+header.container h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+header.container button {
+  background: var(--primary);
+  color: #131212;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* 4. Form & inputs */
+#movieForm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  
+}
+
+#movieForm input,
+#movieForm button {
+  padding: 0.75rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #c62828;
+  color:  #ece4e4;
+}
+
+#movieForm button[type="submit"] {
+  background: var(--primary);
+}
+#movieForm button[type="button"] {
+  background: #555;
+}
+
+/* 5. Bảng danh sách */
+#movieTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#movieTable th,
+#movieTable td {
+  padding: 0.75rem;
+  border: 1px solid #333;
+  text-align: left;
+}
+
+#movieTable thead {
+  background-color: #222;
+}
+
+#movieTable th {
+  color:  #ece4e4;
+}
+
+#movieTable tbody tr:nth-child(even) {
+  background: #1a1a1a;
+}
+
+/* 6. Nút Sửa/Xóa */
+#movieTable button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+#movieTable button:hover {
+  opacity: 0.8;
+}
+
+/* 7. Responsive */
+@media (max-width: 600px) {
+  #movieForm {
+    grid-template-columns: 1fr;
+  }
+  #movieTable th, #movieTable td {
+    font-size: 0.9rem;
+  }
+}
+/* footer */
+footer {
+    position: relative;
+    top:10rem;
+    text-align: center;
+    padding: 40px 0 20px;
+    font-size: 0.9rem;
+    color: #888;
+    
+  }
+.relative{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* border-top: 1px solid #666; */
+    width:30%;
+    margin:0 auto;
+    padding: 0 200px;
+
+  }
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    gap:10px;
+  }
+.social-icons a {
+
+    color:#888;
+    cursor: pointer;text-decoration: none;
+    border: none;
+    transition: 1s all;
+  }
+.social-icons a:hover {
+    color: #0f1011;
+    transform: scale(1.2);
+  }
+
+.padding1{
+  padding:5px;
+  font-size: clamp(10.2px, 2.5vw, 14.4px);
+
+}
+.padding2{
+  padding:10px;
+  font-size: clamp(10.2px, 4.5vw, 14.4px);
+
+}
+h1{
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  padding: 15px;
+}
