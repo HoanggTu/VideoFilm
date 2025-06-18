@@ -1,17 +1,32 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="./admin.css">  <!-- chung style với trang chính :contentReference[oaicite:2]{index=2} -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./admin.css">
 </head>
 <body>
   <header class="container">
-    <h1 style="font-family:'Oswald',sans-serif;">Admin Dashboard</h1>
-    <button onclick="logout()">Logout</button>
+    <h1>Admin Dashboard</h1>
+    <button onclick="window.location.href='../index.html'">Logout</button>
   </header>
+<h2 class="large grid centered square-grid text-xl">
+  <span>H</span>
+  <span>E</span>
+  <span>L</span>
+  <span>L</span>
+  <span>O</span>
+  <span>&nbsp;</span>
+  <span>W</span>
+  <span>O</span>
+  <span>R</span>
+  <span>L</span>
+  <span>D</span>
+</h2>
 
   <main class="main-content">
+   
     <section>
       <h2>Thêm / Chỉnh sửa phim</h2>
       <form id="movieForm">
@@ -20,30 +35,44 @@
         <input type="url" id="image" placeholder="URL poster" required>
         <input type="text" id="genre" placeholder="Thể loại" required>
         <input type="text" id="duration" placeholder="Thời lượng" required>
+        <input type="file" id="video" accept="video/*">
+        <input type="hidden" id="videoUrl">
        
       </form>
     </section>
-        <button type="submit">Lưu</button>
+      <div class="action-buttons">
+        <button type="submit" form="movieForm">Lưu</button>
         <button type="button" onclick="resetForm()">Hủy</button>
+      </div>
     <section>
       <h2>Danh sách phim</h2>
+       
       <table id="movieTable">
         <thead>
-          <tr><th>#</th><th>Tiêu đề</th><th>Ảnh</th><th>Thể loại</th><th>Thời lượng</th><th>Hành động</th></tr>
+          <tr>
+            <th>#</th>
+            <th>Tiêu đề</th>
+            <th>Ảnh</th>
+            <th>Thể loại</th>
+            <th>Thời lượng</th>
+            <th>Video</th>
+            <th>Hành động</th>
+          </tr>
         </thead>
         <tbody></tbody>
       </table>
     </section>
   </main>
+
   <footer>
         <h1 style="font-family: 'Oswald', sans-serif">Lưu ý nhé!</h1>
-        <p class="padding2">Trang web này cung cấp nội dung anime, game chỉ với mục đích giải trí, liên kết của bên thứ ba hiển thị trên trang web của chúng tôi.</p>
+        <p class="padding2">Trang web này cung cấp nội dung upload update của Admin mục đích giải trí, liên kết của bên thứ ba hiển thị trên trang web của chúng tôi.</p>
         <div class="relative">
              <div class="social-icons">
-              <a href="https://www.facebook.com/hoang.tu.328535/"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://www.instagram.com/_bacxiunhiusuatuoi/"><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
               <a href=""><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com/settings/profile"><i class="fab fa-github"></i></a>
+              <a href=""><i class="fab fa-github"></i></a>
              </div> 
          </div>
          
